@@ -137,5 +137,8 @@ describe("[Exercise 7] isEvenNumberAsync", () => {
     const number = await utils.isEvenNumberAsync(2);
     expect(number).toBe(true);
   })
-  // test('[20] resolves false if passed an odd number', () => {})
+  test('[20] resolves false if passed an odd number', async () => {
+    const number = await utils.isEvenNumberAsync(3);
+    expect(number).toBe(false);
+  })
 });
