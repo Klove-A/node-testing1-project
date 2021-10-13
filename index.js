@@ -7,7 +7,7 @@
  * trimProperties({ name: '  jane  ' }) // returns a new object { name: 'jane' }
  */
 function trimProperties(obj) {
-  const result = {}
+  const result = {};
   for (let prop in obj) {
     result[prop] = obj[prop].trim();
   }
@@ -24,9 +24,9 @@ function trimProperties(obj) {
  */
 function trimPropertiesMutation(obj) {
   for (let prop in obj) {
-    obj[prop] = obj[prop].trim()
+    obj[prop] = obj[prop].trim();
   }
-  return obj
+  return obj;
 }
 
 /**
@@ -38,7 +38,13 @@ function trimPropertiesMutation(obj) {
  * findLargestInteger([{ integer: 1 }, { integer: 3 }, { integer: 2 }]) // returns 3
  */
 function findLargestInteger(integers) {
-  // ✨ implement
+  let largest = integers[0].integer;
+  for (let i = 0; i < integers.length; i++) {
+    if (integers[i].integer > largest) {
+      largest = integers[i].integer;
+    }
+  }
+  return largest;
 }
 
 class Counter {
@@ -100,8 +106,8 @@ class Car {
    * @param {number} mpg - miles the car can drive per gallon of gas
    */
   constructor(name, tankSize, mpg) {
-    this.odometer = 0 // car initilizes with zero miles
-    this.tank = tankSize // car initiazes full of gas
+    this.odometer = 0; // car initilizes with zero miles
+    this.tank = tankSize; // car initiazes full of gas
     // ✨ initialize whatever other properties are needed
   }
 
@@ -163,4 +169,4 @@ module.exports = {
   Counter,
   Seasons,
   Car,
-}
+};
