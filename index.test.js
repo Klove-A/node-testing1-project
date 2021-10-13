@@ -48,17 +48,17 @@ describe("[Exercise 4] Counter", () => {
     expect(counter.countDown()).toBe(3);
   });
 
-  test('[7] the SECOND CALL of counter.countDown returns the initial count minus one', () => {
+  test("[7] the SECOND CALL of counter.countDown returns the initial count minus one", () => {
     counter.countDown();
-    expect(counter.countDown()).toBe(2); 
-  })
-  test('[8] the count eventually reaches zero but does not go below zero', () => {
-    counter.countDown();
-    counter.countDown();
+    expect(counter.countDown()).toBe(2);
+  });
+  test("[8] the count eventually reaches zero but does not go below zero", () => {
     counter.countDown();
     counter.countDown();
-    expect(counter.countDown()).toBe(0); 
-  })
+    counter.countDown();
+    counter.countDown();
+    expect(counter.countDown()).toBe(0);
+  });
 });
 
 describe("[Exercise 5] Seasons", () => {
@@ -66,7 +66,10 @@ describe("[Exercise 5] Seasons", () => {
   beforeEach(() => {
     seasons = new utils.Seasons(); // each test must start with fresh seasons
   });
-  // test('[9] the FIRST call of seasons.next returns "summer"', () => {})
+
+   test('[9] the FIRST call of seasons.next returns "summer"', () => {
+     expect(seasons.next()).toBe("summer")
+   })
   // test('[10] the SECOND call of seasons.next returns "fall"', () => {})
   // test('[11] the THIRD call of seasons.next returns "winter"', () => {})
   // test('[12] the FOURTH call of seasons.next returns "spring"', () => {})
