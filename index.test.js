@@ -114,7 +114,14 @@ describe("[Exercise 6] Car", () => {
     expect(focus.drive(50)).toEqual(600);
     expect(focus.tank).toBe(0)
   })
-  // test('[17] refueling allows to keep driving', () => {})
+  test('[17] refueling allows to keep driving', () => {
+    focus.drive(600);
+    focus.refuel(10);
+    expect(focus.drive(100)).toEqual(700);
+    focus.drive(600);
+    focus.refuel(20);
+    expect(focus.drive(600)).toEqual(1500);
+  })
   // test('[18] adding fuel to a full tank has no effect', () => {})
 });
 

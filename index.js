@@ -138,12 +138,11 @@ class Car {
     if (distance <= milesWeCanGo) {
       this.odometer += distance;
       this.tank = this.tank - distance / this.mpg
-      return this.odometer;
     } else {
       this.odometer = this.odometer + milesWeCanGo
       this.tank = 0
-      return this.odometer
     }
+    return this.odometer
   }
 
   /**
@@ -158,7 +157,7 @@ class Car {
    * focus.refuel(99) // returns 600 (tank only holds 20)
    */
   refuel(gallons) {
-    // ✨ implement
+    this.tank += gallons
   }
 }
 
